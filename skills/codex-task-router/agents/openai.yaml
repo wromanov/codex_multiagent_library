@@ -1,0 +1,8 @@
+interface:
+  display_name: "Codex Task Router"
+  short_description: "Explicit, consultative routing guidance for ROOT."
+  default_prompt: "Analyze routing only when the user explicitly asks. DIRECT is the default; explicit invocation lets ROOT evaluate delegation within the user authorization. ROOT owns the gate, agent selection, delegation, and integration."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: false

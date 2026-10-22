@@ -1,0 +1,13 @@
+.install-backups/
+.env
+.env.*
+!.env.example
+**/auth.json
+**/credentials.json
+**/secrets.*
+**/config.toml
+__pycache__/
+*.py[cod]
+*.log
+*.bak
+.DS_Store

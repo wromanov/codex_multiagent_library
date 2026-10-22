@@ -1,0 +1,8 @@
+interface:
+  display_name: "Activity Progress Reporting"
+  short_description: "Progress updates based on actual completed milestones."
+  default_prompt: "Report truthful activity progress for multi-step work; preserve normal updates."
+policy:
+  products:
+    - CODEX
+  allow_implicit_invocation: true
