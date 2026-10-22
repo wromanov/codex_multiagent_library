@@ -21,10 +21,12 @@ Somente após pedido explícito para usar o router o ROOT avalia a delegação, 
 | Implementação Python/CLI | python_cli_engineer | Escrita nos caminhos atribuídos e autorizados. |
 | Integração técnica | integration_engineer | Ação externa exige autorização abrangente. |
 | Implementação de dados/BI | data_bi_engineer | Escrita nos caminhos atribuídos e autorizados. |
-| Implementação técnica geral | implementer | Escopo e permissão explícitos; sem decisões arquiteturais materiais abertas. |
+| Implementação técnica geral | implementer | Engenharia para trabalho que exige decisões técnicas; modo MECHANICAL quando especificação, aceite e decisões materiais estiverem suficientemente fechados. |
 | Testes | test_engineer | Somente escopo de testes atribuído e autorizado. |
 | Validação independente | validator | Retorna evidências; não corrige. |
 | Triage inicial | triage | Investiga; não valida nem corrige. |
 | Documentação | scribe | Materializa documentos atribuídos; não cria decisões normativas. |
 
-ROOT mantém o gate, a seleção, a delegação, a integração e a responsabilidade final. O perfil candidato não confirma disponibilidade de modelo, ferramenta ou isolamento no runtime.
+ROOT mantém o gate, a seleção, a delegação, a integração e a responsabilidade final. Reaproveite agentes ativos adequados, evite repetir análise válida e paralelize somente trabalho independente com ganho material. Prefira menor custo quando a qualidade esperada for equivalente; use especialização Sol quando ela melhorar materialmente a análise. `scribe` é preferência para documentação substancial delegada, não exclusividade de escrita. Revisão independente e demais gates devem ser proporcionais ao aceite, risco e benefício.
+
+O perfil candidato não confirma disponibilidade de modelo, ferramenta ou isolamento no runtime.

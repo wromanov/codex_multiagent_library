@@ -39,6 +39,15 @@ Quando o usuário invocar o router:
 
 Gates cumulativos para delegar: benefício material; tarefa delimitada e atribuível; competência adequada; escopo e autorização já cobrindo o trabalho; permissões e proteção efetivas; ownership e dependências claros; capacidade disponível. Se uma lacuna material exigir autorização ou decisão fora do pedido, suspenda somente a ação afetada e consulte o usuário.
 
+### Heurísticas de eficiência
+
+- Reaproveite agentes ativos e adequados quando isso evitar nova inicialização; não repita análise válida sem necessidade concreta.
+- Mantenha tarefas dependentes em sequência. Paralelize apenas partes independentes quando isso trouxer ganho material.
+- Prefira o perfil de menor custo quando competência e qualidade esperada forem equivalentes. Use agentes Sol de maior custo quando a especialização trouxer ganho material para a decisão ou análise.
+- Use `implementer` em modo MECHANICAL quando especificação, aceite e decisões materiais estiverem suficientemente definidos. Se não estiverem, mantenha o trabalho em ENGINEERING ou suspenda apenas a decisão afetada.
+- Para documentação substancial delegada, prefira `scribe` quando apropriado; isso não torna esse perfil exclusivo para toda escrita.
+- Faça revisão independente quando solicitada, exigida pelo aceite ou justificada por risco ou necessidade concreta. Evite gates, handoffs e delegações sem benefício proporcional.
+
 O router é consultivo. ROOT decide o gate, seleciona agentes, autoriza a delegação dentro do escopo, integra o resultado e responde pela validação final. Invocar o router não obriga a criar subagentes.
 
 ## Perfis e limites

@@ -15,3 +15,10 @@ Estes casos descrevem o comportamento esperado da skill. Não são testes runtim
 11. ROOT integra a entrega e valida o resultado; validator fornece evidência e não corrige.
 12. Nenhuma referência a política externa é necessária para interpretar esta skill ou decidir o gate.
 13. Presença da skill não comprova carregamento nativo. Não declarar homologação sem evidência runtime.
+14. Reaproveitar agente ativo e adequado quando reduzir inicialização ou preservar contexto; não repetir análise já válida sem necessidade concreta.
+15. Tarefas dependentes seguem a ordem necessária; paralelismo é reservado a partes independentes quando houver ganho material.
+16. Escolher perfil de menor custo quando competência e qualidade esperada forem equivalentes; selecionar perfil Sol mais caro somente quando sua especialização melhorar materialmente a análise.
+17. `implementer` pode executar em modo MECHANICAL quando especificação, aceite e decisões materiais estiverem definidos; se faltar decisão relevante, suspender somente a parte afetada ou manter abordagem de engenharia.
+18. Para documentação substancial delegada, preferir `scribe` quando adequado, sem torná-lo perfil exclusivo para qualquer escrita.
+19. Revisão independente só é acrescentada quando solicitada, exigida pelo aceite ou justificada por risco/necessidade concreta; sem ganho material, manter DIRECT.
+20. Competência efetiva, escopo, autorização, permissões e proteção continuam gates cumulativos; heurísticas de custo ou disponibilidade não os substituem.
