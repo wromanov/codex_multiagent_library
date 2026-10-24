@@ -45,7 +45,7 @@ Gates cumulativos para delegar: benefício material; tarefa delimitada e atribu�
 
 ### Heurísticas de eficiência
 
-- Reaproveite agentes ativos e adequados quando isso evitar nova inicialização; não repita análise válida sem necessidade concreta.
+- Reaproveite agentes ativos e adequados quando isso evitar nova inicialização; não repita análise válida sem necessidade concreta. Antes de mudar sua missão, revalide competência, escopo, limites funcionais e permissões efetivas. Reutilização, disponibilidade, contexto preservado ou nova instrução não autorizam atribuir implementação a um agente READ_ONLY/NO_WRITE. Quando a nova missão exigir escrita incompatível com esses limites, selecione um executor compatível e repasse o contexto necessário.
 - Mantenha tarefas dependentes em sequência. Paralelize apenas partes independentes quando isso trouxer ganho material.
 - Prefira o perfil de menor custo quando competência e qualidade esperada forem equivalentes. Use agentes Sol de maior custo quando a especialização trouxer ganho material para a decisão ou análise.
 - Use `implementer` em modo MECHANICAL quando especificação, aceite e decisões materiais estiverem suficientemente definidos. Se não estiverem, mantenha o trabalho em ENGINEERING ou suspenda apenas a decisão afetada.
@@ -54,6 +54,19 @@ Gates cumulativos para delegar: benefício material; tarefa delimitada e atribu�
 
 O router é consultivo. ROOT decide o gate, seleciona agentes, autoriza a delegação dentro do escopo, integra o resultado e responde pela validação final. Invocar o router não obriga a criar subagentes.
 
+## Modo de operação do ROOT — ORCHESTRATION
+
+Antes da primeira edição relevante de cada fase MULTIAGENT com trabalho distribuível, ROOT explicita na comunicação operacional a distribuição das frentes: trabalho próprio e delegado, responsáveis, ownership exclusivo dos arquivos ou recursos graváveis, paths autorizados e não autorizados, dependências, contratos compartilhados e critérios de aceite. Para cada frente delegada, define objetivo, contexto/inputs, entregável/output e limites funcionais, selecionando competência compatível. Pode aproveitar uma distribuição já suficiente e atualizar somente o que mudar; essa organização não cria novo gate formal, card ou documento obrigatório, nem exige planejamento repetitivo para pequenas alterações.
+
+ROOT despacha as frentes prontas que sejam independentes, tragam benefício material e caibam na capacidade simultânea efetivamente disponível/configurada antes de iniciar sua própria edição independente da fase. Não espera novo pedido do usuário para distribuir ou paralelizar trabalho após a aprovação do gate. Frentes dependentes aguardam os inputs necessários. O paralelismo é proporcional: não cria tarefas artificiais para ocupar slots.
+
+ROOT pode executar preparação compartilhada necessária, definição de contratos ou outro trabalho do caminho crítico antes do despacho das frentes que dependam desses resultados. Essa preparação deve constar da distribuição com ownership explícito; não justifica adiar frentes independentes já prontas nem centralizar implementação delegável com benefício material. Frentes de leitura podem coexistir; escrita no mesmo recurso exige ownership único e sequência ou integração coordenada sem sobreposição.
+
+Quando uma descoberta delegada produzir inputs para implementação, ROOT reavalia o trabalho restante antes da primeira edição da fase seguinte, atualiza a distribuição e confere novamente os critérios cumulativos pertinentes à nova missão. Discovery não substitui a atribuição e o despacho da implementação posterior. Mudanças de missão respeitam competência, limites funcionais e permissões efetivas; READ_ONLY/NO_WRITE não se converte em autorização de escrita.
+
+Durante a execução, ROOT acompanha progresso e bloqueios, ordena dependências, resolve conflitos e integra as contribuições. Confere o resultado integrado contra os critérios de aceite e valida os contratos entre as frentes; relatórios individuais dos agentes não substituem essa verificação. ROOT pode manter integração, build ou QA no próprio caminho crítico e continua responsável pelo resultado e pela validação final. Relata o que foi concluído, o que foi verificado e qualquer lacuna ou bloqueio sem evidência suficiente.
+
+Em DIRECT — inclusive quando não houver invocação explícita, ou quando um critério do gate falhar — ROOT é o executor principal e não cria subagentes. Planejar paralelismo significa identificar e coordenar somente frentes paralelas justificadas; não obriga usar todos os agentes, criar novos papéis, cards, gates ou documentos formais.
 ## Perfis e limites
 
 O catálogo técnico está em [catálogo portátil de agentes](references/agent-catalog.md). A matriz de intenção está em [routing-matrix.md](references/routing-matrix.md); critérios de perfil e disponibilidade declarada estão em [model-policy.md](references/model-policy.md). [handoff-contract.md](references/handoff-contract.md) oferece um resumo opcional para handoff, não um documento obrigatório. Casos ilustrativos estão em [validation-cases.md](references/validation-cases.md).
@@ -74,6 +87,20 @@ Forneça ao agente o contexto suficiente na instrução de trabalho: objetivo, e
 Antes da atribuição, confira autorização e escopo, capacidade, ferramenta de delegação, perfil/modelo pretendido, permissões efetivas, ownership, dependências e limites de segurança. Não exija identificadores ou metadados de um filho antes de sua criação.
 
 A verificação POST_SPAWN, antes de liberar trabalho substantivo, limita-se a informações pertinentes que o runtime exponha. ROOT registra os valores efetivamente observados e sua fonte: identidade, modelo/esforço, vínculo pai-filho, permissões/aprovações, ambiente/sandbox e capacidades relevantes. Valores de perfil ou configuração, bem como autodeclarações do filho sem confirmação do runtime, não provam a execução efetiva.
+
+### Verificação proporcional de modelo e esforço efetivos
+
+A verificação de modelo e esforço efetivos é observacional e só deve ser aprofundada quando for material ao risco, ao custo ou ao critério de aceite. Ela não é obrigatória para toda delegação consultiva comum. Use primeiro os metadados pertinentes que o runtime já exponha; consulte um rollout somente quando a verificação continuar material e esses metadados não bastarem. Não presuma disponibilidade de filesystem, caminho, formato ou ferramenta em todos os ambientes.
+
+Classifique modelo e esforço separadamente, preservando a fonte de cada valor. DECLARED identifica um valor em perfil, catálogo ou configuração e registra essa origem; declarações locais e globais permanecem distintas. REQUESTED exige que o valor conste explicitamente na chamada de criação ou em registro observável da solicitação. agent_type comprova o perfil solicitado, mas não permite inferir modelo ou esforço solicitados a partir de TOML. RUNTIME_VERIFIED exige um metadado do runtime ligado a um turno próprio do filho e com sua origem correlacionada. UNVERIFIED cobre campo ausente, rollout inacessível, correlação ambígua ou outra evidência insuficiente. Fontes e classificações podem coexistir por campo; uma divergência observada não apaga o valor declarado ou solicitado.
+
+Para consultar um rollout, parta do evento de criação observado e correlacione a atividade, a identidade do filho retornada pelo runtime e o vínculo pai-filho com a sessão acessível. Use agent_path, quando exposto, como elemento complementar. Nome, horário, perfil, caminho ou nome de arquivo isolados não bastam. No registro correlacionado, use os metadados disponíveis para distinguir o contexto herdado do pai dos turnos próprios do filho e examine o primeiro turn_context comprovadamente próprio. Não suponha que o primeiro ou o último turn_context do arquivo pertença ao filho. Se a correlação ou a fronteira de origem não puder ser confirmada, classifique o valor como UNVERIFIED. Campos como turn_context.model e turn_context.effort são exemplos observados na auditoria fornecida, não garantias de disponibilidade ou formato universal; a classificação confirma somente o valor registrado naquele turno.
+
+Compare valores observados com declarações e valores solicitados somente quando essas fontes estiverem disponíveis, mantendo-as identificadas separadamente. Não infira qual arquivo de configuração foi carregado. Relate divergência comprovada, sua fonte e seu impacto, sem alterar configurações, trocar o agente, fazer novo spawn ou executar fallback/retry automaticamente. Registre apenas uma referência mínima à evidência e os metadados necessários.
+
+Se o rollout ainda não existir, estiver inacessível ou não expuser os campos, registre UNVERIFIED com a causa; não imponha espera ou polling. Uma nova consulta só se justifica quando houver evidência de disponibilidade e a verificação continuar material. Se a comprovação for condição expressa de aceite antes de uma ação, mantenha pendente somente a ação dependente até obter evidência suficiente; uma consulta posterior não comprova retroativamente que a condição foi verificada antes da execução.
+
+Limite a leitura a uma sessão do filho correlacionada e autorizada e extraia somente campos necessários, como identidade, referência, turno, modelo e esforço. Não imprima linhas JSONL integrais nem copie prompts, mensagens, credenciais, tokens ou dados pessoais para o relatório; não transmita logs integrais a subagentes e não modifique logs, sessões ou configurações.
 
 Para cada metadado não observável, registre `UNVERIFIED`. Esse estado indica ausência de evidência; não representa conformidade comprovada. A ausência isolada de telemetria não bloqueia tarefas consultivas comuns quando o contexto e a atribuição são identificáveis, o trabalho está autorizado, os limites funcionais podem ser aplicados, não se exige garantia técnica de identidade/modelo/isolamento e o agente não recebe acesso ou autoridade além do permitido.
 
