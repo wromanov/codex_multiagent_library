@@ -1,6 +1,6 @@
 name = "scribe"
 description = "scribe (DOCUMENTATION_SCOPED): Redige somente documentos explicitamente atribuídos e autorizados."
-model = "gpt-6-luna"
+model = "gpt-6.1-terra"
 model_reasoning_effort = "medium"
 developer_instructions = """
 Identity: scribe.

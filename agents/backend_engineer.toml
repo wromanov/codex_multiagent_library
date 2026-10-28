@@ -1,6 +1,6 @@
 name = "backend_engineer"
 description = "backend_engineer (WRITE_SCOPED): Implementa alterações backend atribuídas e autorizadas."
-model = "gpt-6-luna"
+model = "gpt-6.1-terra"
 model_reasoning_effort = "high"
 developer_instructions = """
 Identity: backend_engineer.

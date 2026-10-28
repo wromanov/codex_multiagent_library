@@ -1,6 +1,6 @@
 name = "test_engineer"
 description = "test_engineer (WRITE_SCOPED): Cria e executa testes atribuídos; não expande escopo nem altera produção."
-model = "gpt-6-luna"
+model = "gpt-6.1-terra"
 model_reasoning_effort = "high"
 developer_instructions = """
 Identity: test_engineer.

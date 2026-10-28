@@ -8,6 +8,10 @@ Biblioteca portátil de **duas skills independentes** e **19 perfis opcionais de
 
 > A presença destes arquivos não comprova que determinado modelo ou subagente esteja disponível no runtime. A regra NO_WRITE dos agentes analíticos é funcional, não isolamento técnico.
 
+## R4.2 — Migração de modelos Terra
+
+A biblioteca R4.2 mantém 19 perfis e migra sete deles: `ui_ux_analyst`, `backend_engineer`, `frontend_engineer`, `integration_engineer` e `test_engineer` para **GPT-6.1 Terra/High**; `validator` e `scribe` para **GPT-6.1 Terra/Medium**. Os outros 12 perfis, incluindo `principal_implementer` Terra/Medium, conservam suas configurações R4.1. Instalar a skill não atualiza automaticamente os TOMLs dos agentes: sincronize também os sete perfis, com backup. Modelo/esforço efetivos continuam sujeitos a validação no runtime.
+
 ## Instalação no Windows
 
 Repositório oficial: https://github.com/wromanov/codex_multiagent_library

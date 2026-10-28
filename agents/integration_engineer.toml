@@ -1,6 +1,6 @@
 name = "integration_engineer"
 description = "integration_engineer (WRITE_SCOPED): Implementa integrações, APIs e protocolos atribuídos e autorizados."
-model = "gpt-6-luna"
+model = "gpt-6.1-terra"
 model_reasoning_effort = "high"
 developer_instructions = """
 Identity: integration_engineer.
