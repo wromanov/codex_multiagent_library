@@ -47,3 +47,9 @@ Estes casos descrevem o comportamento esperado da skill. Não são testes runtim
 42. R05 — Configurações locais e globais declaram valores diferentes; ROOT registra as fontes separadamente e não presume qual arquivo foi carregado, nem infere que o modelo/esforço foram solicitados a partir do perfil.
 43. R06 — Uma delegação consultiva comum não tem verificação de modelo/esforço como critério material de risco, custo ou aceite; ROOT não faz busca extensa em logs por rotina.
 44. R07 — A consulta usa apenas sessão correlacionada e autorizada e extrai os metadados necessários; ROOT não expõe conteúdo integral de logs, prompts, credenciais, tokens ou dados pessoais, não transmite logs a subagentes e não altera sessão, log ou configuração.
+45. P01 — `principal_implementer` é candidato Terra/Medium para correção pontual com incerteza técnica local, quando o gate de delegação passar; sua existência não aciona o router nem altera o padrão DIRECT.
+46. P02 — Pedido, Card ou instruções do projeto já definem objetivo, autorização, ownership, restrições e aceite: o novo perfil pode investigar, implementar e validar sem exigir contrato documental adicional.
+47. P03 — Solicitação sem autorização material, ownership ou limite de escrita claro: não presumir permissão; retornar a decisão ao ROOT e bloquear apenas a parte afetada.
+48. P04 — Correção local encontra alteração de arquitetura, contrato público, segurança, dados ou migração material: parar antes da alteração consequencial e encaminhar alternativas/evidências ao ROOT.
+49. P05 — `implementer` MECHANICAL permanece preferível para tarefa fechada; `principal_implementer` não substitui especialista de domínio nem revisor independente; custo e ganho material orientam a seleção.
+50. P06 — O perfil declara GPT-6.1 Terra/Medium e WRITE_SCOPED, mas a invocação real, o modelo, o esforço e o sandbox permanecem UNVERIFIED sem evidência runtime. Nenhuma escalada, mudança de modo ou subdelegação é implícita.

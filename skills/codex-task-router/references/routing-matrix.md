@@ -22,6 +22,7 @@ Somente após pedido explícito para usar o router o ROOT avalia a delegação, 
 | Integração técnica | integration_engineer | Ação externa exige autorização abrangente. |
 | Implementação de dados/BI | data_bi_engineer | Escrita nos caminhos atribuídos e autorizados. |
 | Implementação técnica geral | implementer | Engenharia para trabalho que exige decisões técnicas; modo MECHANICAL quando especificação, aceite e decisões materiais estiverem suficientemente fechados. |
+| Correção pontual com incerteza técnica local | principal_implementer | Terra/Medium; investiga, escolhe detalhe de implementação, modifica e testa dentro de escopo autorizado; sem Card separado quando pedido/instruções bastam; não redesenha arquitetura. |
 | Testes | test_engineer | Somente escopo de testes atribuído e autorizado. |
 | Validação independente | validator | Retorna evidências; não corrige. |
 | Triage inicial | triage | Investiga; não valida nem corrige. |

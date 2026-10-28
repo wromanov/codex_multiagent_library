@@ -49,6 +49,7 @@ Gates cumulativos para delegar: benefício material; tarefa delimitada e atribu�
 - Mantenha tarefas dependentes em sequência. Paralelize apenas partes independentes quando isso trouxer ganho material.
 - Prefira o perfil de menor custo quando competência e qualidade esperada forem equivalentes. Use agentes Sol de maior custo quando a especialização trouxer ganho material para a decisão ou análise.
 - Use `implementer` em modo MECHANICAL quando especificação, aceite e decisões materiais estiverem suficientemente definidos. Se não estiverem, mantenha o trabalho em ENGINEERING ou suspenda apenas a decisão afetada.
+- Considere `principal_implementer` (GPT-6.1 Terra/Medium) para correção ou melhoria pontual que exija investigação curta e julgamento técnico local, sem nova arquitetura ou contrato formal separado. O perfil não dispensa objetivo, autorização, ownership, limites materiais e aceite; não substitui `implementer` mecânico nem especialistas em tarefas de maior escopo. Se o ROOT puder executar diretamente sem ganho de delegação, mantenha DIRECT.
 - Para documentação substancial delegada, prefira `scribe` quando apropriado; isso não torna esse perfil exclusivo para toda escrita.
 - Faça revisão independente quando solicitada, exigida pelo aceite ou justificada por risco ou necessidade concreta. Evite gates, handoffs e delegações sem benefício proporcional.
 
@@ -76,6 +77,7 @@ O catálogo técnico está em [catálogo portátil de agentes](references/agent-
 - principal_architect — GPT-6 Astra / Medium; NO_WRITE funcional; somente mediante pedido explícito do usuário nesta atividade; leaf.
 - scribe — materializa documentação atribuída dentro da permissão efetiva.
 - implementer — implementação técnica autorizada e delimitada.
+- principal_implementer — GPT-6.1 Terra / Medium; implementação pontual com julgamento técnico local, WRITE_SCOPED funcional, sem autoridade ampliada.
 - Os demais especialistas são considerados pelo ROOT apenas quando a tarefa exige sua competência.
 
 NO_WRITE é limite funcional, não prova de isolamento técnico. Quando STRICT_READ_ONLY for necessário, confirme proteção técnica efetiva antes da atribuição. Perfis, TOML e texto de instruções não comprovam sandbox.

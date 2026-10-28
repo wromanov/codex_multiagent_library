@@ -17,6 +17,7 @@ ROLE != MODEL != EFFORT != TOOL_SURFACE != FUNCTIONAL_PERMISSION != EFFECTIVE_TE
 | data_bi_engineer | gpt-6-luna | high | WRITE_SCOPED; path atribuído |
 | test_engineer | gpt-6-luna | high | WRITE_SCOPED; testes atribuídos |
 | implementer | gpt-6-luna | high | WRITE_SCOPED; ENGINEERING ou MECHANICAL autorizado |
+| principal_implementer | gpt-6.1-terra | medium | WRITE_SCOPED; correções pontuais com julgamento técnico local; sem novo contrato documental quando instruções são suficientes |
 | scout | gpt-6-luna | medium | READ_ONLY funcional |
 | researcher | gpt-6-luna | high | READ_ONLY funcional |
 | triage | gpt-6-luna | medium | READ_ONLY funcional |
@@ -29,4 +30,4 @@ Não exigir sandbox individual em TOML. Sandbox e aprovação efetivos são admi
 
 principal_architect usa Astra/Medium somente por pedido explícito. Não há gate de insuficiência do architect nem escalada automática por gravidade, urgência, recorrência ou recomendação. É leaf e não delega.
 
-Catálogo candidato: ROOT + 18 perfis (19 papéis). ROOT retém gate, seleção e integração.
+Catálogo candidato: ROOT + 19 perfis (20 papéis). ROOT retém gate, seleção e integração. `principal_implementer` não possui authority ampliada; requer autorização, ownership e aceite como qualquer outro executor.

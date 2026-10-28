@@ -1,4 +1,4 @@
-# Agent Catalog — package R3
+# Agent Catalog — package R4.1
 
 Este catálogo documenta os perfis distribuídos na biblioteca. Não comprova instalação, acesso ao modelo ou permissão técnica. O ROOT confere os perfis efetivamente disponíveis no Codex antes de delegar.
 
@@ -12,6 +12,7 @@ Este catálogo documenta os perfis distribuídos na biblioteca. Não comprova in
 | implementer | gpt-6-luna | high | Implementação geral |
 | integration_engineer | gpt-6-luna | high | Integrações e APIs |
 | principal_architect | gpt-6-astra | medium | Consultoria arquitetural, NO_WRITE, somente pedido explícito do usuário |
+| principal_implementer | gpt-6.1-terra | medium | Implementação pontual com julgamento técnico local, WRITE_SCOPED; sem contrato documental separado quando escopo/autorização/aceite já estão claros |
 | python_cli_engineer | gpt-6-luna | high | Python/CLI |
 | researcher | gpt-6-luna | high | Pesquisa, READ_ONLY funcional |
 | reviewer | gpt-6.1-sol | high | Revisão independente, READ_ONLY funcional |

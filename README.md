@@ -1,10 +1,10 @@
 # Codex Multiagent Library
 
-Biblioteca portátil de **duas skills independentes** e **18 perfis opcionais de agentes** para o Codex.
+Biblioteca portátil de **duas skills independentes** e **19 perfis opcionais de agentes** para o Codex.
 
 - `codex-task-router`: **somente invocação explícita pelo usuário**. Toda atividade começa em DIRECT, com zero subagentes. O ROOT pode avaliar delegação depois da invocação.
 - `activity-progress-reporting`: relatórios de progresso para atividades com múltiplas etapas. A telemetria é aditiva e acompanha marcos reais (4%, 8%, ...); não inventa checkpoints.
-- `agents/`: 18 perfis TOML opcionais para delegação autorizada.
+- `agents/`: 19 perfis TOML opcionais para delegação autorizada, incluindo `principal_implementer` (GPT-6.1 Terra/Medium) para correções pontuais que exijam julgamento técnico local e escrita delimitada. O novo perfil dispensa contrato documental separado quando a solicitação e as instruções pertinentes já fornecem objetivo, autorização, escopo e aceite; não dispensa esses requisitos.
 
 > A presença destes arquivos não comprova que determinado modelo ou subagente esteja disponível no runtime. A regra NO_WRITE dos agentes analíticos é funcional, não isolamento técnico.
 
@@ -47,7 +47,7 @@ git diff --check
 ## Estrutura
 
 ```text
-agents/                          # 18 perfis
+agents/                          # 19 perfis
 skills/codex-task-router/        # roteamento explícito + catálogo portátil
 skills/activity-progress-reporting/
 scripts/install.ps1              # simulação por padrão
