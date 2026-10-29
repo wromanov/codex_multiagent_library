@@ -13,20 +13,21 @@ for path in agent_files:
         assert profile.get(key), (path, key)
     profiles[path.stem] = profile
 
-terra_r43 = {
-    "ui_ux_analyst": "medium",
-    "backend_engineer": "medium",
-    "frontend_engineer": "medium",
-    "integration_engineer": "medium",
-    "test_engineer": "medium",
-    "validator": "medium",
-    "scribe": "medium",
-    "principal_implementer": "medium",
+expected_r44 = {
+    "backend_engineer": ("gpt-6-luna", "xhigh"),
+    "frontend_engineer": ("gpt-6-luna", "xhigh"),
+    "test_engineer": ("gpt-6-luna", "xhigh"),
+    "validator": ("gpt-6-luna", "xhigh"),
+    "scribe": ("gpt-6-luna", "high"),
+    "reviewer": ("gpt-6.1-terra", "medium"),
+    "security_reviewer": ("gpt-6.1-terra", "medium"),
+    "integration_engineer": ("gpt-6.1-terra", "medium"),
+    "ui_ux_analyst": ("gpt-6.1-terra", "medium"),
+    "principal_implementer": ("gpt-6.1-terra", "medium"),
 }
-for name, effort in terra_r43.items():
+for name, (model, effort) in expected_r44.items():
     profile = profiles[name]
-    assert profile["model"] == "gpt-6.1-terra", name
-    assert profile["model_reasoning_effort"] == effort, name
+    assert (profile["model"], profile["model_reasoning_effort"]) == (model, effort), name
 for name, profile in profiles.items():
     if profile["model"] == "gpt-6.1-terra":
         assert profile["model_reasoning_effort"] == "medium", name
@@ -60,5 +61,5 @@ for invariant in (
     "principal_implementer",
 ):
     assert invariant in skill, invariant
-assert "R4.3" in (references / "agent-catalog.md").read_text(encoding="utf-8")
-print(f"PASS TOML: {len(profiles)} profiles; Terra R4.3 medium targets; catalog/policy parity; router invariants")
+assert "R4.4" in (references / "agent-catalog.md").read_text(encoding="utf-8")
+print(f"PASS TOML: {len(profiles)} profiles; R4.4 requested assignments; catalog/policy parity; router invariants")

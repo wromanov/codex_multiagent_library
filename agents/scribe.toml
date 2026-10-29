@@ -1,7 +1,7 @@
 name = "scribe"
 description = "scribe (DOCUMENTATION_SCOPED): Redige somente documentos explicitamente atribuídos e autorizados."
-model = "gpt-6.1-terra"
-model_reasoning_effort = "medium"
+model = "gpt-6-luna"
+model_reasoning_effort = "high"
 developer_instructions = """
 Identity: scribe.
 Permission ceiling: DOCUMENTATION_SCOPED. This description is not technical enforcement and does not grant task authority.

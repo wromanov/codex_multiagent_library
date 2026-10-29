@@ -8,9 +8,9 @@ Biblioteca portátil de **duas skills independentes** e **19 perfis opcionais de
 
 > A presença destes arquivos não comprova que determinado modelo ou subagente esteja disponível no runtime. A regra NO_WRITE dos agentes analíticos é funcional, não isolamento técnico.
 
-## R4.3 — Terra/Medium em todos os perfis Terra
+## R4.4 - Perfis de modelo e esforco por atribuicao
 
-A biblioteca R4.3 preserva 19 perfis, aplicando **GPT-6.1 Terra/Medium** a todos os oito agentes Terra: backend_engineer, frontend_engineer, integration_engineer, test_engineer, ui_ux_analyst, validator, scribe e principal_implementer. Os 11 perfis Luna, Sol e Astra permanecem inalterados. A mudanca reduz o esforco declarado dos cinco perfis antes configurados em Terra/High; consumo real depende do runtime e do tipo de tarefa. Sincronize skill e TOMLs globais com backup; a instalacao da skill nao modifica automaticamente os agentes.
+A biblioteca R4.4 preserva 19 perfis. backend_engineer, frontend_engineer, test_engineer e validator usam GPT-6 Luna/XHigh; scribe usa GPT-6 Luna/High; reviewer e security_reviewer usam GPT-6.1 Terra/Medium. Os outros 12 perfis e todos os limites funcionais permanecem inalterados. Sincronize a skill e os arquivos TOML globais com backup: instalar a skill nao altera automaticamente a configuracao dos agentes. Modelo/esforco efetivos dependem do runtime; aumento de esforco pode elevar uso de tokens.
 
 ## Instalação no Windows
 
