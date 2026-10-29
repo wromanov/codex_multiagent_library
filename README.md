@@ -8,9 +8,9 @@ Biblioteca portátil de **duas skills independentes** e **19 perfis opcionais de
 
 > A presença destes arquivos não comprova que determinado modelo ou subagente esteja disponível no runtime. A regra NO_WRITE dos agentes analíticos é funcional, não isolamento técnico.
 
-## R4.2 — Migração de modelos Terra
+## R4.3 — Terra/Medium em todos os perfis Terra
 
-A biblioteca R4.2 mantém 19 perfis e migra sete deles: `ui_ux_analyst`, `backend_engineer`, `frontend_engineer`, `integration_engineer` e `test_engineer` para **GPT-6.1 Terra/High**; `validator` e `scribe` para **GPT-6.1 Terra/Medium**. Os outros 12 perfis, incluindo `principal_implementer` Terra/Medium, conservam suas configurações R4.1. Instalar a skill não atualiza automaticamente os TOMLs dos agentes: sincronize também os sete perfis, com backup. Modelo/esforço efetivos continuam sujeitos a validação no runtime.
+A biblioteca R4.3 preserva 19 perfis, aplicando **GPT-6.1 Terra/Medium** a todos os oito agentes Terra: backend_engineer, frontend_engineer, integration_engineer, test_engineer, ui_ux_analyst, validator, scribe e principal_implementer. Os 11 perfis Luna, Sol e Astra permanecem inalterados. A mudanca reduz o esforco declarado dos cinco perfis antes configurados em Terra/High; consumo real depende do runtime e do tipo de tarefa. Sincronize skill e TOMLs globais com backup; a instalacao da skill nao modifica automaticamente os agentes.
 
 ## Instalação no Windows
 

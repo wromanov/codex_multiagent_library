@@ -9,13 +9,13 @@ ROLE != MODEL != EFFORT != TOOL_SURFACE != FUNCTIONAL_PERMISSION != EFFECTIVE_TE
 | principal_architect | gpt-6-astra | medium | NO_WRITE; user-explicit-only; leaf |
 | reviewer | gpt-6.1-sol | high | READ_ONLY funcional; revisão sem correção |
 | security_reviewer | gpt-6.1-sol | high | READ_ONLY funcional; auditoria sem exploração destrutiva |
-| ui_ux_analyst | gpt-6.1-terra | high | READ_ONLY funcional; análise sem edição |
-| backend_engineer | gpt-6.1-terra | high | WRITE_SCOPED; path atribuído |
-| frontend_engineer | gpt-6.1-terra | high | WRITE_SCOPED; path atribuído |
+| ui_ux_analyst | gpt-6.1-terra | medium | READ_ONLY funcional; análise sem edição |
+| backend_engineer | gpt-6.1-terra | medium | WRITE_SCOPED; path atribuído |
+| frontend_engineer | gpt-6.1-terra | medium | WRITE_SCOPED; path atribuído |
 | python_cli_engineer | gpt-6-luna | high | WRITE_SCOPED; path atribuído |
-| integration_engineer | gpt-6.1-terra | high | WRITE_SCOPED; path atribuído |
+| integration_engineer | gpt-6.1-terra | medium | WRITE_SCOPED; path atribuído |
 | data_bi_engineer | gpt-6-luna | high | WRITE_SCOPED; path atribuído |
-| test_engineer | gpt-6.1-terra | high | WRITE_SCOPED; testes atribuídos |
+| test_engineer | gpt-6.1-terra | medium | WRITE_SCOPED; testes atribuídos |
 | implementer | gpt-6-luna | high | WRITE_SCOPED; ENGINEERING ou MECHANICAL autorizado |
 | principal_implementer | gpt-6.1-terra | medium | WRITE_SCOPED; correções pontuais com julgamento técnico local; sem novo contrato documental quando instruções são suficientes |
 | scout | gpt-6-luna | medium | READ_ONLY funcional |

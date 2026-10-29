@@ -1,7 +1,7 @@
 name = "ui_ux_analyst"
 description = "ui_ux_analyst (READ_ONLY): Avalia fluxo, interface, acessibilidade e usabilidade sem implementar."
 model = "gpt-6.1-terra"
-model_reasoning_effort = "high"
+model_reasoning_effort = "medium"
 developer_instructions = """
 Identity: ui_ux_analyst.
 Permission ceiling: READ_ONLY. This description is not technical enforcement and does not grant task authority.

@@ -53,6 +53,6 @@ Estes casos descrevem o comportamento esperado da skill. Não são testes runtim
 48. P04 — Correção local encontra alteração de arquitetura, contrato público, segurança, dados ou migração material: parar antes da alteração consequencial e encaminhar alternativas/evidências ao ROOT.
 49. P05 — `implementer` MECHANICAL permanece preferível para tarefa fechada; `principal_implementer` não substitui especialista de domínio nem revisor independente; custo e ganho material orientam a seleção.
 50. P06 — O perfil declara GPT-6.1 Terra/Medium e WRITE_SCOPED, mas a invocação real, o modelo, o esforço e o sandbox permanecem UNVERIFIED sem evidência runtime. Nenhuma escalada, mudança de modo ou subdelegação é implícita.
-51. M01 — A R4.2 preserva 19 perfis e declara Terra/High em backend_engineer, frontend_engineer, integration_engineer, test_engineer e ui_ux_analyst.
-52. M02 — A R4.2 declara Terra/Medium em validator e scribe; principal_implementer permanece Terra/Medium, sem autonomia ou permissões adicionais.
-53. M03 — Os demais perfis e as regras DIRECT, zero subagentes e invocação explícita permanecem inalterados; a instalação de SKILL.md não substitui sincronização dos TOMLs globais.
+51. M01 — A R4.3 preserva 19 perfis, e todos os oito agentes que declaram gpt-6.1-terra usam medium.
+52. M02 — Os cinco antigos Terra/High passam a Terra/Medium; validator, scribe e principal_implementer permanecem Terra/Medium, sem ampliacao de permissao.
+53. M03 — Luna, Sol e Astra nao mudam; DIRECT, zero subagentes, invocacao explicita e gate ROOT permanecem inalterados. Atualizar a skill nao substitui a sincronizacao dos TOMLs instalados.

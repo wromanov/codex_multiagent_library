@@ -13,20 +13,23 @@ for path in agent_files:
         assert profile.get(key), (path, key)
     profiles[path.stem] = profile
 
-terra_r42 = {
-    "ui_ux_analyst": "high",
-    "backend_engineer": "high",
-    "frontend_engineer": "high",
-    "integration_engineer": "high",
-    "test_engineer": "high",
+terra_r43 = {
+    "ui_ux_analyst": "medium",
+    "backend_engineer": "medium",
+    "frontend_engineer": "medium",
+    "integration_engineer": "medium",
+    "test_engineer": "medium",
     "validator": "medium",
     "scribe": "medium",
     "principal_implementer": "medium",
 }
-for name, effort in terra_r42.items():
+for name, effort in terra_r43.items():
     profile = profiles[name]
     assert profile["model"] == "gpt-6.1-terra", name
     assert profile["model_reasoning_effort"] == effort, name
+for name, profile in profiles.items():
+    if profile["model"] == "gpt-6.1-terra":
+        assert profile["model_reasoning_effort"] == "medium", name
 assert "WRITE_SCOPED" in profiles["principal_implementer"]["developer_instructions"]
 
 references = root / "skills" / "codex-task-router" / "references"
@@ -57,5 +60,5 @@ for invariant in (
     "principal_implementer",
 ):
     assert invariant in skill, invariant
-assert "R4.2" in (references / "agent-catalog.md").read_text(encoding="utf-8")
-print(f"PASS TOML: {len(profiles)} profiles; Terra R4.2 targets; catalog/policy parity; router invariants")
+assert "R4.3" in (references / "agent-catalog.md").read_text(encoding="utf-8")
+print(f"PASS TOML: {len(profiles)} profiles; Terra R4.3 medium targets; catalog/policy parity; router invariants")

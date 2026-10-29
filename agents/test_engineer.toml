@@ -1,7 +1,7 @@
 name = "test_engineer"
 description = "test_engineer (WRITE_SCOPED): Cria e executa testes atribuídos; não expande escopo nem altera produção."
 model = "gpt-6.1-terra"
-model_reasoning_effort = "high"
+model_reasoning_effort = "medium"
 developer_instructions = """
 Identity: test_engineer.
 Permission ceiling: WRITE_SCOPED. This description is not technical enforcement and does not grant task authority.
