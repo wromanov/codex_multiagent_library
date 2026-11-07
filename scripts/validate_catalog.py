@@ -13,7 +13,8 @@ for path in agent_files:
         assert profile.get(key), (path, key)
     profiles[path.stem] = profile
 
-expected_r44 = {
+expected_r45 = {
+    "diagnostic_analyst": ("gpt-6.1-terra", "high"),
     "backend_engineer": ("gpt-6-luna", "xhigh"),
     "frontend_engineer": ("gpt-6-luna", "xhigh"),
     "test_engineer": ("gpt-6-luna", "xhigh"),
@@ -25,12 +26,13 @@ expected_r44 = {
     "ui_ux_analyst": ("gpt-6.1-terra", "medium"),
     "principal_implementer": ("gpt-6.1-terra", "medium"),
 }
-for name, (model, effort) in expected_r44.items():
+for name, (model, effort) in expected_r45.items():
     profile = profiles[name]
     assert (profile["model"], profile["model_reasoning_effort"]) == (model, effort), name
 for name, profile in profiles.items():
     if profile["model"] == "gpt-6.1-terra":
-        assert profile["model_reasoning_effort"] == "medium", name
+        expected_effort = "high" if name == "diagnostic_analyst" else "medium"
+        assert profile["model_reasoning_effort"] == expected_effort, name
 assert "WRITE_SCOPED" in profiles["principal_implementer"]["developer_instructions"]
 
 references = root / "skills" / "codex-task-router" / "references"
@@ -61,5 +63,5 @@ for invariant in (
     "principal_implementer",
 ):
     assert invariant in skill, invariant
-assert "R4.4" in (references / "agent-catalog.md").read_text(encoding="utf-8")
-print(f"PASS TOML: {len(profiles)} profiles; R4.4 requested assignments; catalog/policy parity; router invariants")
+assert "R4.5" in (references / "agent-catalog.md").read_text(encoding="utf-8")
+print(f"PASS TOML: {len(profiles)} profiles; R4.5 diagnostic assignment; catalog/policy parity; router invariants")

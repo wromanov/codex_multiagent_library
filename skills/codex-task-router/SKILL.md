@@ -49,7 +49,7 @@ Gates cumulativos para delegar: benefício material; tarefa delimitada e atribu�
 - Mantenha tarefas dependentes em sequência. Paralelize apenas partes independentes quando isso trouxer ganho material.
 - Prefira o perfil de menor custo quando competência e qualidade esperada forem equivalentes. Use agentes Sol de maior custo quando a especialização trouxer ganho material para a decisão ou análise.
 - Use `implementer` em modo MECHANICAL quando especificação, aceite e decisões materiais estiverem suficientemente definidos. Se não estiverem, mantenha o trabalho em ENGINEERING ou suspenda apenas a decisão afetada.
-- Na R4.4, backend_engineer, frontend_engineer, test_engineer e validator declaram GPT-6 Luna/XHigh; scribe declara GPT-6 Luna/High; reviewer e security_reviewer declaram GPT-6.1 Terra/Medium. Os demais perfis mantem suas declaracoes anteriores, inclusive integration_engineer, ui_ux_analyst e principal_implementer em Terra/Medium. Modelo/esforco declarados nao comprovam execucao efetiva no runtime. Preserve especializacao, limites funcionais e gate material.
+- Na R4.5, diagnostic_analyst declara GPT-6.1 Terra/High para diagnostico READ_ONLY, sem mudanca de permissoes ou autonomia. backend_engineer, frontend_engineer, test_engineer e validator permanecem GPT-6 Luna/XHigh; scribe GPT-6 Luna/High; reviewer e security_reviewer GPT-6.1 Terra/Medium. Os demais perfis sao preservados. Modelos/esforcos declarados nao comprovam execucao efetiva no runtime. Preserve especializacao, limites funcionais, DIRECT e gate ROOT.
 - Considere `principal_implementer` (GPT-6.1 Terra/Medium) para correção ou melhoria pontual que exija investigação curta e julgamento técnico local, sem nova arquitetura ou contrato formal separado. O perfil não dispensa objetivo, autorização, ownership, limites materiais e aceite; não substitui `implementer` mecânico nem especialistas em tarefas de maior escopo. Se o ROOT puder executar diretamente sem ganho de delegação, mantenha DIRECT.
 - Para documentação substancial delegada, prefira `scribe` quando apropriado; isso não torna esse perfil exclusivo para toda escrita.
 - Faça revisão independente quando solicitada, exigida pelo aceite ou justificada por risco ou necessidade concreta. Evite gates, handoffs e delegações sem benefício proporcional.
@@ -74,7 +74,7 @@ Em DIRECT — inclusive quando não houver invocação explícita, ou quando um 
 O catálogo técnico está em [catálogo portátil de agentes](references/agent-catalog.md). A matriz de intenção está em [routing-matrix.md](references/routing-matrix.md); critérios de perfil e disponibilidade declarada estão em [model-policy.md](references/model-policy.md). [handoff-contract.md](references/handoff-contract.md) oferece um resumo opcional para handoff, não um documento obrigatório. Casos ilustrativos estão em [validation-cases.md](references/validation-cases.md).
 
 - architect — GPT-6.1 Sol / High; análise arquitetural; NO_WRITE funcional.
-- diagnostic_analyst — GPT-6.1 Sol / Medium; diagnóstico; NO_WRITE funcional.
+- diagnostic_analyst — GPT-6.1 Terra / High; diagnóstico; NO_WRITE funcional.
 - principal_architect — GPT-6 Astra / Medium; NO_WRITE funcional; somente mediante pedido explícito do usuário nesta atividade; leaf.
 - scribe — materializa documentação atribuída dentro da permissão efetiva.
 - implementer — implementação técnica autorizada e delimitada.

@@ -1,7 +1,7 @@
 name = "diagnostic_analyst"
 description = "diagnostic_analyst (NO_WRITE): Investiga causa raiz e evidências; não implementa nem corrige."
-model = "gpt-6.1-sol"
-model_reasoning_effort = "medium"
+model = "gpt-6.1-terra"
+model_reasoning_effort = "high"
 developer_instructions = """
 Identity: diagnostic_analyst.
 Permission ceiling: NO_WRITE (functional); this is not technical sandbox isolation or task authority.

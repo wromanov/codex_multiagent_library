@@ -5,7 +5,7 @@ ROLE != MODEL != EFFORT != TOOL_SURFACE != FUNCTIONAL_PERMISSION != EFFECTIVE_TE
 | Perfil | Modelo | Esforço | Limite funcional |
 |---|---|---|---|
 | architect | gpt-6.1-sol | high | NO_WRITE; advisory leaf |
-| diagnostic_analyst | gpt-6.1-sol | medium | NO_WRITE; diagnóstico leaf |
+| diagnostic_analyst | gpt-6.1-terra | high | NO_WRITE; diagnóstico leaf |
 | principal_architect | gpt-6-astra | medium | NO_WRITE; user-explicit-only; leaf |
 | reviewer | gpt-6.1-terra | medium | READ_ONLY funcional; revisão sem correção |
 | security_reviewer | gpt-6.1-terra | medium | READ_ONLY funcional; auditoria sem exploração destrutiva |

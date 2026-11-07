@@ -1,4 +1,4 @@
-# Agent Catalog — package R4.4
+# Agent Catalog — package R4.5
 
 Este catálogo documenta os perfis distribuídos na biblioteca. Não comprova instalação, acesso ao modelo ou permissão técnica. O ROOT confere os perfis efetivamente disponíveis no Codex antes de delegar.
 
@@ -7,7 +7,7 @@ Este catálogo documenta os perfis distribuídos na biblioteca. Não comprova in
 | architect | gpt-6.1-sol | high | Arquitetura, NO_WRITE |
 | backend_engineer | gpt-6-luna | xhigh | Implementação backend |
 | data_bi_engineer | gpt-6-luna | high | Implementação dados e BI |
-| diagnostic_analyst | gpt-6.1-sol | medium | Diagnóstico, NO_WRITE |
+| diagnostic_analyst | gpt-6.1-terra | high | Diagnóstico, NO_WRITE |
 | frontend_engineer | gpt-6-luna | xhigh | Implementação frontend |
 | implementer | gpt-6-luna | high | Implementação geral |
 | integration_engineer | gpt-6.1-terra | medium | Integrações e APIs |

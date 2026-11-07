@@ -53,6 +53,6 @@ Estes casos descrevem o comportamento esperado da skill. Não são testes runtim
 48. P04 — Correção local encontra alteração de arquitetura, contrato público, segurança, dados ou migração material: parar antes da alteração consequencial e encaminhar alternativas/evidências ao ROOT.
 49. P05 — `implementer` MECHANICAL permanece preferível para tarefa fechada; `principal_implementer` não substitui especialista de domínio nem revisor independente; custo e ganho material orientam a seleção.
 50. P06 — O perfil declara GPT-6.1 Terra/Medium e WRITE_SCOPED, mas a invocação real, o modelo, o esforço e o sandbox permanecem UNVERIFIED sem evidência runtime. Nenhuma escalada, mudança de modo ou subdelegação é implícita.
-51. M01 - Na R4.4, backend_engineer, frontend_engineer, test_engineer e validator declaram GPT-6 Luna/XHigh.
-52. M02 - Na R4.4, scribe declara GPT-6 Luna/High, enquanto reviewer e security_reviewer declaram GPT-6.1 Terra/Medium; seus limites de permissao funcionais nao mudam.
-53. M03 - Todos os outros 12 perfis, DIRECT, zero subagentes, invocacao explicita e gate ROOT permanecem inalterados. Alterar a skill nao substitui instalar os TOMLs globais.
+51. M01 - R4.5: diagnostic_analyst declara GPT-6.1 Terra/High com NO_WRITE funcional; nao recebe escrita, delegacao ou autoridade adicional.
+52. M02 - R4.5: backend_engineer, frontend_engineer, test_engineer e validator permanecem Luna/XHigh; scribe Luna/High; reviewer e security_reviewer Terra/Medium.
+53. M03 - Outros 18 perfis preservados. DIRECT, zero subagentes, invocacao explicita e gate ROOT permanecem inalterados; sincronizar SKILL.md nao substitui sincronizar agentes globais.
